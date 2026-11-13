@@ -1,0 +1,52 @@
+name: solar_panel_care
+description: >-
+  Solar Panel Care — Advanced IoT-based solar panel monitoring, fault alerts
+  and remote control system. Every solar plate is individually monitored through
+  an IoT device, with instant alarms when a plate gets damaged so it can be
+  repaired before other panels are affected.
+  Developed by Panel Care Team 7-H.
+publish_to: 'none'
+version: 2.0.0+2
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # State management
+  provider: ^6.1.2
+
+  # Local persistence (panels, alerts, users, settings)
+  shared_preferences: ^2.3.2
+
+  # Beautiful live charts (power, efficiency, weekly energy)
+  fl_chart: ^0.69.2
+
+  # Date / number formatting
+  intl: ^0.19.0
+
+  # Weather service (Open-Meteo, no API key needed) with offline fallback
+  http: ^1.2.2
+
+  # Emergency alarm sound for damaged plate alerts
+  audioplayers: ^6.1.0
+
+  # Vibration patterns for critical alerts
+  vibration: ^2.0.0
+
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/sounds/
+    - assets/data/
